@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="board">
+      <section class="card card-1 player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">99</p>
+        <div class="current-box">
+          <p class="current-lable">Current</p>
+          <p class="current-points" id="current--0">24</p>
+        </div>
+      </section>
+      <section class="card card-2 player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current-box">
+          <p class="current-lable">Current</p>
+          <p class="current-points" id="current--1">24</p>
+        </div>
+      </section>
+
+      <img src="dice-3.png" class="dice" alt="playing dice" />
+      <button class="btn btn-new">New Game</button>
+      <button class="btn btn-roll">Roll Dice</button>
+      <button class="btn btn-hold">Hold Points</button>
+      <button class="btn-i btn-rules">
+        <i class="fa fa-question-circle"></i>
+      </button>
+      <div class="rules hidden">
+        <p>
+          Each turn, a player repeatedly rolls a die until either a 1 is rolled
+          or the player decides to "hold":<br />
+          If the player rolls a 1, they score nothing and it becomes the next
+          player's turn. <br />
+          If the player rolls any other number, it is added to their turn total
+          and the player's turn continues. <br />
+          If a player chooses to "hold", their turn total is added to their
+          score, and it becomes the next player's turn.<br />
+          The first player to score 100 or more points wins.
+        </p>
+        <button class="close-rules">&#x274C;</button>
+        <div class="overlay"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
